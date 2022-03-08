@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.headerblock {
+    width: 100%;
+    height: 100px;
+    /* margin-top: 50px; */
+    background-color: rgb(6, 66, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footerblock {
+    background-color: rgb(26, 95, 20);
+    height: 80px;
+    color: white;
+    font-size: 1.5em;
+    padding:20px;
+    text-align: center;
+
+}
+
+.contentblock {
+    height: 70vh;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 20px
+}
+
+.circle {
+    background: lightblue;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    margin-left:240px;
+}
+
+.listblock {
+    cursor: pointer;
+}
+
+.headercontent {
+    color: white;
+}
+
+
+.userlist {
+    font-size: 30px;
+    margin-left: 40px;
+    padding: 20px;
+}
+
+.flex_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkusers {
+    padding: 18px;
+    color:rgb(18, 86, 95)
+}
+
+.userdetails {
+
+    text-align: center;
+    font-size: 2rem;
+    line-height: 5rem;
+}
+
+.usercontainer {
+    width: 100%;
+    height:80vh;
+}
+
+.iconheader {
+    cursor: pointer;
+}
+
+@media (max-width:414px) {
+
+    .searchbar {
+        display: flex;
+        flex-direction:column;
+    }
+    .listheader {
+        font-size: 20px;
+        line-height: 10px;
+        display: flex;
+    }
+    .circle {
+        width: 30px;
+        height:30px;
+        font-size: 18px;
+    }
+    .userdetails {
+        font-size:20px;
+    }
+    
+}
+
+@media (min-width: 415px) and (max-width:912px) {
+    .circle {
+        margin:0 5px;
+    }
+    .listheader {
+        font-size: 28px;
+        margin-left:140px;
+        line-height: 25px;
+    }
 }
