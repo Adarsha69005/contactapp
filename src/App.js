@@ -24,26 +24,27 @@ function App() {
 
   const handleSearchChange = useCallback((e, data) => {
     
-    console.log(data.value);
+  
     setText(data.value)
-    let userData = JSON.parse(localStorage.getItem('userdata'))
+    // let userData = JSON.parse(localStorage.getItem('userdata'))
     setTimeout(() => {
-      if(value.length == 0){
+      if(data.value.length === 0){
         setUsers(JSON.parse(localStorage.getItem('userdata')))
-
-      
-      } else {
-        const re = new RegExp(_.escapeRegExp(value), 'i')
-        const isMatch = (result) => re.test(result.name)
+        setText('');
+        return
+      } 
+      const re = new RegExp(_.escapeRegExp(data.value), 'i')
+      const isMatch = (result) => re.test(result.name)
 
   
-        let results =_.filter(userData, isMatch)
-        setUsers(results);
-        setResult(results)
-      }
-    },2000)
+      let results =_.filter(JSON.parse(localStorage.getItem('userdata')), isMatch)
+      setUsers(results);
+      setResult(results)
+
+    },3000)
     
-  })
+  },[users,value])
+
 
   const loadData = async() => {
     
