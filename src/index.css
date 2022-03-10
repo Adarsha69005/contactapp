@@ -108,7 +108,14 @@
     }
     .userdetails {
         font-size:15px;
-        line-height: 5rem;
+        line-height: 4.5rem;
+    }
+    .footerblock {
+        height:60px;
+        font-size: 1.2rem;
+    }
+    .usercontainer {
+        height:70vh;
     }
     
 }
