@@ -72,6 +72,10 @@
     color:rgb(18, 86, 95);
 }
 
+.linkusers:hover {
+    background-color: aqua;
+}
+
 .userdetails {
 
     text-align: center;
@@ -131,3 +135,29 @@
     }
 }
 
+@media (min-width: 913px) and (max-width:1024px) {
+    .circle {
+        margin:0 5px;
+    }
+    .listheader {
+        font-size: 23px;
+        margin-left:140px;
+        line-height: 5px;
+    }
+    .usercontainer {
+        height:60vh;
+    }
+
+    .footerblock {
+        height:60px;
+        font-size: 1.2rem;
+    }
+    .headercontent {
+        color: white;
+        height:20px;
+    }
+    .userdetails {
+        font-size:20px;
+        line-height: 4rem;
+    }
+}
